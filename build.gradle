@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'gradleTool.com'
+version '1.0-SNAPSHOT'
+
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'com.gradle.sample.HelloGradle'
+
+repositories {
+    mavenLocal()
+    maven
+            {
+             url "http://maven.aliyun.com/nexus/content/groups/public/"
+            }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
